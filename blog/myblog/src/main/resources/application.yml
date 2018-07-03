@@ -1,0 +1,29 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/myblog?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8
+    username: root
+    password: 123456
+  jpa:
+    hibernate:
+      ddl-auto: update #��һ�δ����� ������update
+    show-sql: true
+  session:
+    store-type: none
+
+xiaoxiong:
+    blog:
+      photo:
+        path: F:\myblog\myblog\myblog\src\main\resources\photos\
+    security:
+      browser:
+        signUpUrl:
+
+security:
+  basic:
+    enabled: false
+
+#    open-in-view: true

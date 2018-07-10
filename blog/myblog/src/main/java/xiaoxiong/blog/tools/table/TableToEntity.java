@@ -98,7 +98,7 @@ public class TableToEntity {
 
 
     public static void main(String[] args){
-        selectTable("reply");
+        selectTable("reply_answer");
 //        ResultSet rs=st.executeQuery("select * from user");
     }
 

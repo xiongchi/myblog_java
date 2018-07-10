@@ -14,13 +14,14 @@ spring:
   session:
     store-type: none
 
+
 xiaoxiong:
     blog:
       photo:
         path: F:\myblog\myblog\myblog\src\main\resources\photos\
     security:
       browser:
-        signUpUrl:
+        signUpUrl: /**
 
 security:
   basic:

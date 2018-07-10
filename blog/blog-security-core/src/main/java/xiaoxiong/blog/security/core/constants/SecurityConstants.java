@@ -17,4 +17,9 @@ public interface SecurityConstants {
      */
     String DEFAULT_LOGIN_PROCESSING_URL_FORM = "/authentication/form";
 
+    /**
+     * 图片验证码session key
+     */
+    String SEESION_KEY = "SESSSION_KEY_IMAGE_CODE";
+
 }

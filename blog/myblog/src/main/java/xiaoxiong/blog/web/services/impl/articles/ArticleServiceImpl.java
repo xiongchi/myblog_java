@@ -11,20 +11,15 @@ import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import xiaoxiong.blog.web.convert.ArticleConvert;
-import xiaoxiong.blog.web.dto.ArticleDto;
+import xiaoxiong.blog.web.convert.ArticleTypeConvert;
+import xiaoxiong.blog.web.dto.articles.ArticleDto;
+import xiaoxiong.blog.web.dto.articles.ArticleTypeDto;
 import xiaoxiong.blog.web.entity.articles.Article;
 import xiaoxiong.blog.web.entity.articles.ArticleType;
 import xiaoxiong.blog.web.repository.articles.ArticleRepository;
 import xiaoxiong.blog.web.repository.articles.ArticleTypeRepository;
 import xiaoxiong.blog.web.services.articles.IArticleService;
-import xiaoxiong.blog.web.entity.articles.ArticleType;
-import xiaoxiong.blog.web.repository.articles.ArticleRepository;
-import xiaoxiong.blog.web.services.articles.IArticleService;
-import xiaoxiong.blog.web.convert.ArticleConvert;
-import xiaoxiong.blog.web.dto.ArticleDto;
-import xiaoxiong.blog.web.entity.articles.Article;
 import xiaoxiong.blog.web.exceptions.DataNotFindException;
-import xiaoxiong.blog.web.repository.articles.ArticleTypeRepository;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -43,6 +38,9 @@ public class ArticleServiceImpl implements IArticleService {
 
     @Autowired
     private ArticleConvert articleConvert;
+
+    @Autowired
+    private ArticleTypeConvert articleTypeConvert;
 
     @Override
     public void saveArticle(ArticleDto dto) {
@@ -124,5 +122,12 @@ public class ArticleServiceImpl implements IArticleService {
     @Override
     public Page<Article> findMdTimeAll(Date start, Date end, Pageable pageable) {
         return articleRepository.findArticlesByArticleTimeBetween(start, end, pageable);
+    }
+
+    @Override
+    public List<ArticleTypeDto> findAllType() {
+        List<ArticleType> types = typeRepository.findAll();
+        List<ArticleTypeDto> typeDtos = articleTypeConvert.toDaoList(types);
+        return typeDtos;
     }
 }

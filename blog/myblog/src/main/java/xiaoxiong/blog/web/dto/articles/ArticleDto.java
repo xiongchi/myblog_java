@@ -1,4 +1,4 @@
-package xiaoxiong.blog.web.dto;
+package xiaoxiong.blog.web.dto.articles;
 
 
 import com.fasterxml.jackson.annotation.JsonView;

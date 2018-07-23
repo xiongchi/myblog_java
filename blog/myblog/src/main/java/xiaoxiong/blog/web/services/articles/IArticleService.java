@@ -3,9 +3,8 @@ package xiaoxiong.blog.web.services.articles;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import xiaoxiong.blog.web.dto.ArticleDto;
-import xiaoxiong.blog.web.entity.articles.Article;
-import xiaoxiong.blog.web.dto.ArticleDto;
+import xiaoxiong.blog.web.dto.articles.ArticleDto;
+import xiaoxiong.blog.web.dto.articles.ArticleTypeDto;
 import xiaoxiong.blog.web.entity.articles.Article;
 
 import java.util.Date;
@@ -25,4 +24,5 @@ public interface IArticleService {
     //查找修改时间内的文章
     Page<Article> findMdTimeAll(Date start, Date end, Pageable pageable);
 
+    List<ArticleTypeDto> findAllType();
 }

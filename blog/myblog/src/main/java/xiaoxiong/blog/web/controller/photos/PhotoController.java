@@ -11,8 +11,6 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
-import xiaoxiong.blog.web.exceptions.ParamErrorException;
-import xiaoxiong.blog.web.services.photos.PhotoService;
 import xiaoxiong.blog.web.dto.photos.AlbumDto;
 import xiaoxiong.blog.web.dto.photos.PhotoDto;
 import xiaoxiong.blog.web.exceptions.ParamErrorException;
@@ -26,6 +24,7 @@ import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -56,6 +55,7 @@ public class PhotoController {
     @PostMapping("/saveAlbum")
     @CrossOrigin
     public ResultMsg saveAlbum(AlbumDto albumDto){
+        albumDto.setAlbumTime(new Date());
         photoService.saveAlbum(albumDto);
         return ResultUtil.success(albumDto);
     }

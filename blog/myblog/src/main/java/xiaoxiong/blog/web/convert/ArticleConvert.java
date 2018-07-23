@@ -2,7 +2,7 @@ package xiaoxiong.blog.web.convert;
 
 
 import org.springframework.stereotype.Component;
-import xiaoxiong.blog.web.dto.ArticleDto;
+import xiaoxiong.blog.web.dto.articles.ArticleDto;
 import xiaoxiong.blog.web.entity.articles.Article;
 
 /**

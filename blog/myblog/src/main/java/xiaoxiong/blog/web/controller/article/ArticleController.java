@@ -7,10 +7,13 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.web.bind.annotation.*;
-import xiaoxiong.blog.web.dto.ArticleDto;
+import xiaoxiong.blog.web.dto.articles.ArticleDto;
+import xiaoxiong.blog.web.dto.articles.ArticleTypeDto;
 import xiaoxiong.blog.web.result.ResultMsg;
 import xiaoxiong.blog.web.services.articles.IArticleService;
 import xiaoxiong.blog.web.utils.ResultUtil;
+
+import java.util.List;
 
 
 @RestController
@@ -53,11 +56,9 @@ public class ArticleController {
         return ResultUtil.success(article);
     }
 
-
-
-
-
-
-
-
+    @GetMapping("/allTypes")
+    public ResultMsg getAllTypes(){
+        List<ArticleTypeDto> allType = iArticleService.findAllType();
+        return ResultUtil.success(allType);
+    }
 }

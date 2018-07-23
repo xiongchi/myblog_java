@@ -19,6 +19,8 @@ public class AlbumDto implements Serializable {
 
     private Date albumTime;
 
+    private String albumPassword;
+
     private List<PhotoDto> photosList;
 
     public AlbumDto() {
@@ -68,5 +70,13 @@ public class AlbumDto implements Serializable {
 
     public void setAlbumTime(Date albumTime) {
         this.albumTime = albumTime;
+    }
+
+    public String getAlbumPassword() {
+        return albumPassword;
+    }
+
+    public void setAlbumPassword(String albumPassword) {
+        this.albumPassword = albumPassword;
     }
 }

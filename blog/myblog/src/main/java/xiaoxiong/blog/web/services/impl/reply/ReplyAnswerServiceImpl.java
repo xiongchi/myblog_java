@@ -24,7 +24,7 @@ public class ReplyAnswerServiceImpl implements IReplyAnswerService {
     private ReplyAnswerRepository replyAnswerRepository;
 
     @Override
-    @MethodLogAnno("service---保存回复出错")
+    @MethodLogAnno("service---保存回复")
     public ReplyAnswerDto saveAnswer(ReplyAnswerDto rad) {
         ReplyAnswer ra = replyAnswerConvert.toEntity(rad);
         ReplyAnswer saveRa = replyAnswerRepository.save(ra);

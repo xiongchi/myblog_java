@@ -24,7 +24,10 @@ public class Album implements Serializable{
 
     private String albumType;
 
+    @Temporal(TemporalType.TIMESTAMP)
     private Date albumTime;
+
+    private String albumPassword;
 
     public Album() {}
 
@@ -63,5 +66,13 @@ public class Album implements Serializable{
 
     public void setAlbumTime(Date albumTime) {
         this.albumTime = albumTime;
+    }
+
+    public String getAlbumPassword() {
+        return albumPassword;
+    }
+
+    public void setAlbumPassword(String albumPassword) {
+        this.albumPassword = albumPassword;
     }
 }

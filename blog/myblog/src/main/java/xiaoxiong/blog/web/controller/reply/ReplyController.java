@@ -7,9 +7,9 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.web.bind.annotation.*;
 import xiaoxiong.blog.web.dto.reply.ReplyDto;
-import xiaoxiong.blog.web.result.ResultMsg;
-import xiaoxiong.blog.web.services.reply.IReplyService;
-import xiaoxiong.blog.web.utils.ResultUtil;
+import xiaoxiong.blog.result.ResultMsg;
+import xiaoxiong.blog.web.services.inf.reply.IReplyService;
+import xiaoxiong.blog.utils.ResultUtil;
 
 import java.util.Date;
 

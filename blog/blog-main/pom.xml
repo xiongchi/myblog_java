@@ -10,10 +10,10 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>../blog-security-browser</module>
-        <module>../blog-security-core</module>
         <module>../myblog</module>
         <module>../blog-reply</module>
+        <module>../security</module>
+        <module>../frameworker</module>
     </modules>
 
 

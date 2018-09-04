@@ -8,7 +8,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 import xiaoxiong.blog.MyblogApplication;
 import xiaoxiong.blog.web.dto.reply.ReplyAnswerDto;
-import xiaoxiong.blog.web.services.reply.IReplyAnswerService;
+import xiaoxiong.blog.web.services.inf.reply.IReplyAnswerService;
 
 import java.util.Date;
 

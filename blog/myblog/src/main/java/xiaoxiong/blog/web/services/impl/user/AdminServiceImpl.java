@@ -3,13 +3,12 @@ package xiaoxiong.blog.web.services.impl.user;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import xiaoxiong.blog.web.annotations.MethodLogAnno;
-import xiaoxiong.blog.web.annotations.MethodLogAnno;
+import xiaoxiong.blog.annotations.MethodLog;
 import xiaoxiong.blog.web.convert.AdminConvert;
 import xiaoxiong.blog.web.dto.user.AdminDto;
 import xiaoxiong.blog.web.entity.user.Admin;
 import xiaoxiong.blog.web.repository.user.AdminRepository;
-import xiaoxiong.blog.web.services.user.IAdminService;
+import xiaoxiong.blog.web.services.inf.user.IAdminService;
 
 /**
  * @Author: XiongChi
@@ -26,7 +25,7 @@ public class AdminServiceImpl implements IAdminService {
     private AdminConvert adminConvert;
 
     @Override
-    @MethodLogAnno("service---用户登录")
+    @MethodLog("service---用户登录")
     public AdminDto getAdminByName(String adminName) {
         Admin a = adminRepository.findAdminByAdminName(adminName);
         AdminDto aDto = adminConvert.toDto(a);
@@ -34,7 +33,7 @@ public class AdminServiceImpl implements IAdminService {
     }
 
     @Override
-    @MethodLogAnno("service---用户存储")
+    @MethodLog("service---用户存储")
     public void saveAdmin(AdminDto dto) {
         Admin a = adminConvert.toEntity(dto);
         adminRepository.save(a);

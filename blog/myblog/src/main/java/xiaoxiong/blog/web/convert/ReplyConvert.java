@@ -1,6 +1,7 @@
 package xiaoxiong.blog.web.convert;
 
 import org.springframework.stereotype.Component;
+import xiaoxiong.blog.convert.Convert;
 import xiaoxiong.blog.web.dto.reply.ReplyDto;
 import xiaoxiong.blog.web.entity.reply.Reply;
 

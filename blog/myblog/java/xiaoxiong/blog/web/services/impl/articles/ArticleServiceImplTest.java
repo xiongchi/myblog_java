@@ -9,7 +9,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 import xiaoxiong.blog.MyblogApplication;
 import xiaoxiong.blog.web.dto.articles.ArticleTypeDto;
-import xiaoxiong.blog.web.services.articles.IArticleService;
+import xiaoxiong.blog.web.services.inf.articles.IArticleService;
 
 import java.util.List;
 

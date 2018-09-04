@@ -2,12 +2,12 @@ package xiaoxiong.blog.web.services.impl.reply;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import xiaoxiong.blog.web.annotations.MethodLogAnno;
+import xiaoxiong.blog.annotations.MethodLog;
 import xiaoxiong.blog.web.convert.ReplyAnswerConvert;
 import xiaoxiong.blog.web.dto.reply.ReplyAnswerDto;
 import xiaoxiong.blog.web.entity.reply.ReplyAnswer;
 import xiaoxiong.blog.web.repository.reply.ReplyAnswerRepository;
-import xiaoxiong.blog.web.services.reply.IReplyAnswerService;
+import xiaoxiong.blog.web.services.inf.reply.IReplyAnswerService;
 
 /**
  * @Author: XiongChi
@@ -24,7 +24,7 @@ public class ReplyAnswerServiceImpl implements IReplyAnswerService {
     private ReplyAnswerRepository replyAnswerRepository;
 
     @Override
-    @MethodLogAnno("service---保存回复")
+    @MethodLog("service---保存回复")
     public ReplyAnswerDto saveAnswer(ReplyAnswerDto rad) {
         ReplyAnswer ra = replyAnswerConvert.toEntity(rad);
         ReplyAnswer saveRa = replyAnswerRepository.save(ra);

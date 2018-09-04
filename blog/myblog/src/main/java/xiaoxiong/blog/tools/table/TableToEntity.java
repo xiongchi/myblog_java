@@ -18,9 +18,9 @@ public class TableToEntity {
     private static Connection conn = null;
     private static Statement st = null;
     static {
-        String URL="jdbc:mysql://127.0.0.1:3306/myblog?useUnicode=true&amp;characterEncoding=utf-8";
+        String URL="jdbc:mysql://localhost:3306/myblog?useSSL=false&useUnicode=true&characterEncoding=utf8&characterSetResults=utf8";
         String user = "root";
-        String password = "123456";
+        String password = "root123";
         try {
             Class.forName("com.mysql.jdbc.Driver");
             conn = DriverManager.getConnection(URL, user, password);
@@ -98,7 +98,7 @@ public class TableToEntity {
 
 
     public static void main(String[] args){
-        selectTable("reply_answer");
+        selectTable("admin");
 //        ResultSet rs=st.executeQuery("select * from user");
     }
 

@@ -13,11 +13,11 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 import xiaoxiong.blog.web.dto.photos.AlbumDto;
 import xiaoxiong.blog.web.dto.photos.PhotoDto;
-import xiaoxiong.blog.web.exceptions.ParamErrorException;
+import xiaoxiong.blog.exceptions.ParamErrorException;
 import xiaoxiong.blog.web.properties.BlogProperties;
-import xiaoxiong.blog.web.result.ResultMsg;
-import xiaoxiong.blog.web.services.photos.PhotoService;
-import xiaoxiong.blog.web.utils.ResultUtil;
+import xiaoxiong.blog.result.ResultMsg;
+import xiaoxiong.blog.web.services.inf.photos.PhotoService;
+import xiaoxiong.blog.utils.ResultUtil;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.BufferedOutputStream;

@@ -18,8 +18,8 @@ import xiaoxiong.blog.web.entity.articles.Article;
 import xiaoxiong.blog.web.entity.articles.ArticleType;
 import xiaoxiong.blog.web.repository.articles.ArticleRepository;
 import xiaoxiong.blog.web.repository.articles.ArticleTypeRepository;
-import xiaoxiong.blog.web.services.articles.IArticleService;
-import xiaoxiong.blog.web.exceptions.DataNotFindException;
+import xiaoxiong.blog.web.services.inf.articles.IArticleService;
+import xiaoxiong.blog.exceptions.DataNotFindException;
 
 import java.util.ArrayList;
 import java.util.Date;

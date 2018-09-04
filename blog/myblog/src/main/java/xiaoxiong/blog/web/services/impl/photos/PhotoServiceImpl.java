@@ -14,10 +14,10 @@ import xiaoxiong.blog.web.dto.photos.AlbumDto;
 import xiaoxiong.blog.web.dto.photos.PhotoDto;
 import xiaoxiong.blog.web.entity.photos.Album;
 import xiaoxiong.blog.web.entity.photos.Photo;
-import xiaoxiong.blog.web.exceptions.ParamErrorException;
+import xiaoxiong.blog.exceptions.ParamErrorException;
 import xiaoxiong.blog.web.repository.photos.AlbumRepository;
 import xiaoxiong.blog.web.repository.photos.PhotoRepository;
-import xiaoxiong.blog.web.services.photos.PhotoService;
+import xiaoxiong.blog.web.services.inf.photos.PhotoService;
 
 import java.util.List;
 

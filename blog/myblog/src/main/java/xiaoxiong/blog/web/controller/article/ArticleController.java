@@ -7,11 +7,12 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.web.bind.annotation.*;
+import xiaoxiong.blog.annotations.ControlLog;
 import xiaoxiong.blog.web.dto.articles.ArticleDto;
 import xiaoxiong.blog.web.dto.articles.ArticleTypeDto;
-import xiaoxiong.blog.web.result.ResultMsg;
-import xiaoxiong.blog.web.services.articles.IArticleService;
-import xiaoxiong.blog.web.utils.ResultUtil;
+import xiaoxiong.blog.result.ResultMsg;
+import xiaoxiong.blog.web.services.inf.articles.IArticleService;
+import xiaoxiong.blog.utils.ResultUtil;
 
 import java.util.List;
 
@@ -29,6 +30,7 @@ public class ArticleController {
      * @return
      */
     @GetMapping("find/{id}")
+    @ControlLog("查找文章")
     @CrossOrigin
     @JsonView(ArticleDto.ArticleContent.class)
     public ResultMsg findArticle(@PathVariable(name = "id") int articeId){

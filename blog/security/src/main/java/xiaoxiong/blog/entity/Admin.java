@@ -1,5 +1,7 @@
 package xiaoxiong.blog.entity;
 
+import xiaoxiong.blog.utils.RandomUtil;
+
 import javax.persistence.*;
 import java.util.Date;
 
@@ -14,8 +16,7 @@ public class Admin {
 
     // 用户id
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer adminId;
+    private String userId;
 
     private String adminName;
 
@@ -25,16 +26,26 @@ public class Admin {
 
     private String adminIcon;
 
-    private Integer userId;
 
     private Date createTime;
 
-    public Integer getAdminId() {
-        return adminId;
+    public Admin() {
     }
 
-    public void setAdminId(Integer adminId) {
-        this.adminId = adminId;
+    public Admin(String adminName, String adminPassword, String adminSalt) {
+        this.userId = RandomUtil.uuid().substring(0, 18);
+        this.adminName = adminName;
+        this.adminPassword = adminPassword;
+        this.adminSalt = adminSalt;
+        this.createTime = new Date();
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     public String getAdminName() {
@@ -61,13 +72,6 @@ public class Admin {
         this.adminSalt = adminSalt;
     }
 
-    public Integer getUserId() {
-        return userId;
-    }
-
-    public void setUserId(Integer userId) {
-        this.userId = userId;
-    }
 
     public String getAdminIcon() {
         return adminIcon;

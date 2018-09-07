@@ -5,7 +5,7 @@ package xiaoxiong.blog.exceptions;
  * @Description:
  * @Date: 2018/6/11
  */
-public class ParamErrorException extends Exception {
+public class ParamErrorException extends RuntimeException {
 
     public ParamErrorException() {
         super("传入参数异常");

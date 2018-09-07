@@ -88,9 +88,11 @@ public class JacksonAdapter extends WebMvcConfigurerAdapter {
             jsonGen.writeNumber(resultMsg.getCode());
             jsonGen.writeFieldName("message");
             jsonGen.writeString(resultMsg.getMessage());
-            jsonGen.writeFieldName("obj");
-            jsonGen.writeRawValue(om.writerWithView(serializerProvider.getActiveView())
-                    .writeValueAsString(resultMsg.getObj()));
+            if(resultMsg.getObj() != null) {
+                jsonGen.writeFieldName("obj");
+                jsonGen.writeRawValue(om.writerWithView(serializerProvider.getActiveView())
+                        .writeValueAsString(resultMsg.getObj()));
+            }
             jsonGen.writeEndObject();
         }
     }

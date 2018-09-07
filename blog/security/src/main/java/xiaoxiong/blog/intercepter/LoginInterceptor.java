@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
  * @Date: 2018/8/24
  */
 public class LoginInterceptor implements HandlerInterceptor {
+
     @Override
     public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o) throws Exception {
         System.out.println(1111);

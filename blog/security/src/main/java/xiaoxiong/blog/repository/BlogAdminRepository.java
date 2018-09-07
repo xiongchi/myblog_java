@@ -8,5 +8,8 @@ import xiaoxiong.blog.entity.Admin;
  * @Description: 用户操作
  * @Date: 2018/9/3
  */
-public interface AdminRepository extends JpaRepository<Admin, Integer> {
+public interface BlogAdminRepository extends JpaRepository<Admin, String> {
+
+    Admin findAdminByAdminName(String adminName);
+
 }
